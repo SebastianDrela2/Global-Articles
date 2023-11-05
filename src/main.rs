@@ -35,7 +35,7 @@ fn render_articles(library: &Library)
 fn main() -> Result<(), Box<dyn Error>>
 {
     let api_key = "API KEY";
-    let mut url = format!("https://newsapi.org/v2/top-headlines?country=us&apiKey={}", api_key);
+    let url = format!("https://newsapi.org/v2/top-headlines?country=us&apiKey={}", api_key);
 
     let articles = get_articles(url)?;
     render_articles(&articles);
